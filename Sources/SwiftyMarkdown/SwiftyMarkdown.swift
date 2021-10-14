@@ -540,16 +540,16 @@ extension SwiftyMarkdown {
 			attributes[.paragraphStyle] = paragraphStyle
 		case .unorderedList, .unorderedListIndentFirstOrder, .unorderedListIndentSecondOrder, .orderedList, .orderedListIndentFirstOrder, .orderedListIndentSecondOrder:
 
-			let interval : CGFloat = 30
+			let interval : CGFloat = 20
 			var addition = interval
 			var indent = ""
 			switch line.lineStyle as! MarkdownLineStyle {
 			case .unorderedListIndentFirstOrder, .orderedListIndentFirstOrder:
 				addition = interval * 2
-				indent = "    "
+				indent = "\t"
 			case .unorderedListIndentSecondOrder, .orderedListIndentSecondOrder:
 				addition = interval * 3
-				indent = "        "
+				indent = "\t\t"
 			default:
 				break
 			}
