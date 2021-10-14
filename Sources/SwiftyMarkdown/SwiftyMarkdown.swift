@@ -280,7 +280,7 @@ If that is not set, then the system default will be used.
 
 	open var strikethrough = BasicStyles()
 
-	public var bullet : String = "・"
+	public var bullet : String = "  •  "
 
 	public var underlineLinks : Bool = false
 
@@ -546,10 +546,10 @@ extension SwiftyMarkdown {
 			switch line.lineStyle as! MarkdownLineStyle {
 			case .unorderedListIndentFirstOrder, .orderedListIndentFirstOrder:
 				addition = interval * 2
-				indent = "\t"
+				indent = "  "
 			case .unorderedListIndentSecondOrder, .orderedListIndentSecondOrder:
 				addition = interval * 3
-				indent = "\t\t"
+				indent = "    "
 			default:
 				break
 			}
