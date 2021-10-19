@@ -493,18 +493,18 @@ extension SwiftyMarkdown {
 			self.orderedListCount += 1
 			self.orderedListIndentFirstOrderCount = 0
 			self.orderedListIndentSecondOrderCount = 0
-			listItem = "\(self.orderedListCount)."
+			listItem = "\(self.orderedListCount).\t"
 		case .orderedListIndentFirstOrder, .unorderedListIndentFirstOrder:
 			self.orderedListIndentFirstOrderCount += 1
 			self.orderedListIndentSecondOrderCount = 0
 			if markdownLineStyle == .orderedListIndentFirstOrder {
-				listItem = "\(self.orderedListIndentFirstOrderCount)."
+				listItem = "\(self.orderedListIndentFirstOrderCount).\t"
 			}
 
 		case .orderedListIndentSecondOrder, .unorderedListIndentSecondOrder:
 			self.orderedListIndentSecondOrderCount += 1
 			if markdownLineStyle == .orderedListIndentSecondOrder {
-				listItem = "\(self.orderedListIndentSecondOrderCount)."
+				listItem = "\(self.orderedListIndentSecondOrderCount).\t"
 			}
 
 		default:
